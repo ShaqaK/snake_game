@@ -3,10 +3,13 @@ from turtle import Screen
 from snake import Snake
 from food import Food
 from scoreboard import  Scoreboard
+
+
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor('black')
 screen.title('Swish Swish Bish')
+
 # Turning off the tracer
 screen.tracer(0)
 
@@ -21,6 +24,7 @@ screen.onkey(snake.left, 'Left')
 screen.onkey(snake.right, 'Right')
 
 game_is_on = True
+
 while game_is_on:
     # Snake body will show up in one piece
     screen.update()
@@ -43,21 +47,6 @@ while game_is_on:
         if snake.head.distance(seg) < 10:
             scoreboard.game_over()
             game_is_on = False
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
